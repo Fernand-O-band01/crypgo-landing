@@ -294,14 +294,45 @@ p{
         display: block;
         height: 20px;
         width: 30px;
+        cursor: pointer;
     }
     .navbar{
-        padding: 16px;
+        padding: 30px;
+    }
+    .navbar.active {
+        flex-wrap: wrap;
+        background-color: #000510;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        padding-bottom: 20px;
+        height: auto;
+    }
+    .navbar.active section{
+        margin-top: 100px;
+    }
+    .navbar.active ol {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        align-items: center;
+        gap: 25px;
+        padding-top: 20px;
+        margin: 0;
+    }
+    .navbar.active .nav_button{
+        display: block;
+        order: 4;
+        margin: 20px auto 0 auto;
     }
 
     section{
-        max-height: 250px;
+        min-height: 550px;
         height: 100%;
+        padding-top: 100px;
     }
     .right{
         position: relative;
@@ -370,7 +401,7 @@ p{
         width: 100%;
     }
     .trusted{
-        padding: 0;
+        padding: 20px 0px 20px 0px;
     }
 }
 
@@ -379,7 +410,7 @@ p{
         overflow-x: hidden;
     }
     .navbar{
-        padding: 16px;
+        padding: 30px;
     }
 
     ol, .nav_button{
@@ -389,6 +420,36 @@ p{
         display: block;
         height: 20px;
         width: 30px;
+        cursor: pointer;
+    }
+    .navbar.active {
+        flex-wrap: wrap;
+        background-color: #000510;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1000;
+        padding-bottom: 20px;
+        height: auto;
+    }
+    .navbar.active section{
+        margin-top: 100px;
+    }
+    .navbar.active ol {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        align-items: center;
+        gap: 25px;
+        padding-top: 20px;
+        margin: 0;
+    }
+    .navbar.active .nav_button{
+        display: block;
+        order: 4;
+        margin: 20px auto 0 auto;
     }
     
     section{
@@ -450,7 +511,7 @@ p{
         width: 100%;
     }
     .trusted{
-        margin-top: 100px;
+        margin-top: 10px;
     }
 
   
