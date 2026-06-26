@@ -38,7 +38,7 @@ body{
 }
 ol{
     display: flex;
-    gap: 50px;
+    gap: 32px;
     list-style-type: none;
 }
 li{
@@ -49,7 +49,7 @@ section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-height: 654px;
+    min-height: 654px;
     height: 100%;
     width: 100%;
     max-width: 1300px;
@@ -179,4 +179,70 @@ p{
     bottom: 0;
     background: linear-gradient(to top, #000510, transparent);
     z-index: 5; 
+}
+.trusted{
+    width: 100%;
+    gap: 32px;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    margin: 0 auto;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+
+}
+.logo span {
+    color: white;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -2%;
+
+}
+.logo_size{
+    width: 131px;
+    height: 32px;
+
+}
+.logo_size.fipsum{
+    width: 187.31707763671875px;
+    height: 32px;
+}
+.logo_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 1300px;
+    width: 100%;
+    height: 32px;
+    gap: 72px;
+}
+.logo_container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(to right, #000000 0%, #000000 31.5%, transparent 100%);
+}
+.logo_container::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    pointer-events: none;
+    z-index: 2;
+    background: linear-gradient(to left, #000000 0%, #000000 30%, transparent 100%);
 }
