@@ -446,6 +446,7 @@ p{
         padding-top: 20px;
         margin: 0;
     }
+
     .navbar.active .nav_button{
         display: block;
         order: 4;
@@ -500,6 +501,7 @@ p{
         display: none;
     }
     .main_text{
+        padding-top: 40px;
         font-size: 48px;
         line-height: 1.1;
     }
@@ -517,4 +519,58 @@ p{
   
 }
 
+@media (width <= 420px) {
+    .main_text{
+        padding-top: 10px;
+        font-size: 40px;
+        line-height: 1.1;
+    }
+    section{
+        flex-direction: column;
+        padding: 20px 30px 0px 30px;
+    }
+    .left, .right{
+        width: 100%;
+    }
+    .right{
+        position: relative;
+        display: flex;
+        height: 400px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin-top: 20px;
+    }
+    .visa_card{
+        display: flex;
+        position: relative;
+        top: 40px;
+        bottom: 0;
+        left: 10px;
+        right: auto;
+        scale: 140%;
+    }
+    .chart_circle{
+        position: relative;
+        top: -180px;
+        bottom: 10;
+        left: 100px;
+        right: 0
+    }
+    .curve_text{
+        position: relative;
+        top: 70px ;
+        bottom: 80px;
+        left: auto;
+        right: 70px;
+        scale: 170%;
+        z-index: 1;
+    }
+    .phone_wrapper{
+        display: none;
+    }
+    .phone{
+        display: none;
+    }
+}
 
