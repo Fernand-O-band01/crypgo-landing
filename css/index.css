@@ -298,20 +298,17 @@ p{
     }
     .navbar{
         padding: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
     }
     .navbar.active {
         flex-wrap: wrap;
         background-color: #000510;
-        position: absolute;
-        width: 100%;
-        left: 0;
-        top: 0;
-        z-index: 1000;
         padding-bottom: 20px;
         height: auto;
-    }
-    .navbar.active section{
-        margin-top: 100px;
     }
     .navbar.active ol {
         display: flex;
@@ -332,7 +329,7 @@ p{
     section{
         min-height: 550px;
         height: 100%;
-        padding-top: 100px;
+        padding-top: 170px;
     }
     .right{
         position: relative;
