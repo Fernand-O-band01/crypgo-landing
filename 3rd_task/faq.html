@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & FAQs</title>
+    <link rel="icon" type="image/x-icon" href="../assets/Logo_C.ico">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        body {
+            background-color: #000510;
+            color: #ffffff;
+            line-height: 1.6;
+            padding: 0px 20px 40px 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+
+        .navbar{
+            display: flex;
+            align-items: center;
+            justify-content: space-between; 
+            height: 100px;
+            max-width: 1300px;
+            width: 100%;
+            margin: 0 auto;
+            background-color: #000510;
+            padding: 0px 50px;
+        }
+        .crypgo_logo{
+            height: 32px;
+            width: 135px;
+        }
+
+        .crypgo_logo img {
+            display: block;
+        }   
+
+        .nav_button{
+            width: 131px;
+            padding: 13px 24px 13px 24px;
+            background-color: #99e39e;
+            border-radius: 12px;
+            border: none;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;      
+            font-size: 16px;
+            line-height: 1.4;      
+            letter-spacing: 0px;  
+            color: #000000; 
+            cursor: pointer;
+        }
+        .nav_button:hover{
+            background-color: #65c76c;
+        }
+        ol{
+            width: 443px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .nav_item {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 400;      
+            font-size: 15.5px;
+            line-height: 1.4;      
+            letter-spacing: normal;  
+            color: white;
+            list-style: none;
+            cursor: pointer;
+        }
+        .nav_item:hover{
+            color:#99e39e
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #99e39e;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #65c76c;
+        }
+
+        h1 {
+            font-size: 40px;
+            margin-bottom: 24px;
+            font-weight: 600;
+            letter-spacing: -1px;
+        }
+
+        
+        .search-wrapper {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        #faq-search {
+            width: 100%;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: white;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #faq-search:focus {
+            border-color: #99e39e;
+        }
+
+        #faq-search::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+       
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        
+        .faq-item.hidden {
+            display: none;
+        }
+
+        .faq-question {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+        }
+
+        .icon {
+            font-size: 24px;
+            color: #99e39e;
+            transition: transform 0.3s ease;
+        }
+
+
+        .faq-answer-wrapper {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-in-out;
+        }
+
+        .faq-answer {
+            padding-bottom: 24px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 16px;
+        }
+
+        
+        .faq-item.active .icon {
+            transform: rotate(45deg); 
+        }
+
+        .faq-item.active .faq-answer-wrapper {
+            max-height: 500px; 
+        }
+
+        .burguer-menu{
+    display: none;
+}
+
+        
+@media (width <= 1024px) {
+    
+    
+    ol, .nav_button{
+        display: none;
+    }
+
+    .burguer-menu{
+        display: block;
+        height: 20px;
+        width: 30px;
+        cursor: pointer;
+    }
+    .navbar{
+        padding: 30px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+    .navbar.active {
+        flex-wrap: wrap;
+        background-color: #000510;
+        padding-bottom: 20px;
+        height: auto;
+    }
+    .navbar.active ol {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        order: 3;
+        align-items: center;
+        gap: 25px;
+        padding-top: 20px;
+        margin: 0;
+    }
+    .navbar.active .nav_button{
+        display: block;
+        order: 4;
+        margin: 20px auto 0 auto;
+    }
+
+    .container{
+        margin-top: 120px;
+    }
+
+}
+        
+ @media (width <= 600px) {
+    h1 { font-size: 32px; }
+    .faq-question { font-size: 16px; }
+        }
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="crypgo_logo">
+            <a href="../index.html"><img src="/assets/Logo.svg" alt="" srcset=""></a>
+        </div>
+        <ol>
+            <li class="nav_item">Features</li>
+            <li class="nav_item">Benefits</li>
+            <li class="nav_item">Services</li>
+            <li class="nav_item">Why Crypgo</li>
+            <a href="faq.html"><li class="nav_item">FAQs</li></a>
+        </ol>
+
+        
+        <button class="nav_button">Book a call</button>
+        <img src="/assets/menu.png" alt="" srcset="" class="burguer-menu">
+        
+    </nav>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Back to Crypgo Home</a>
+        
+        <h1>How can we help you?</h1>
+
+        <div class="search-wrapper">
+            <input type="text" id="faq-search" placeholder="Search for questions or keywords...">
+        </div>
+
+        <div class="faq-list">
+            
+            <div class="faq-item">
+                <button class="faq-question">What is Crypgo and how does it work? <span class="icon">+</span></button>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        Crypgo is a fast and secure cryptocurrency exchange platform designed for both professionals and beginners. It allows you to trade, store, and manage your digital assets with advanced security features and a user-friendly interface.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are there any trading fees? <span class="icon">+</span></button>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        Yes, we charge a minimal flat fee of 0.1% per transaction. However, if you hold our native token, you can unlock discounts of up to 50% on all your trading fees.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How do I verify my account (KYC)? <span class="icon">+</span></button>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        To verify your account, navigate to the settings dashboard and upload a valid government-issued ID along with a recent proof of address. The automated verification process usually takes less than 10 minutes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is my cryptocurrency safe? <span class="icon">+</span></button>
+                <div class="faq-answer-wrapper">
+                    <div class="faq-answer">
+                        Security is our top priority. 95% of all digital assets are stored in multi-signature offline cold wallets. We also enforce Two-Factor Authentication (2FA) for all withdrawals and account changes.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", () => {
+        const burgerBTN = document.querySelector('.burguer-menu');
+        const navbar = document.querySelector('.navbar');
+
+        burgerBTN.addEventListener('click', () => {
+        navbar.classList.toggle('active')
+    })
+
+})
+
+        
+        const searchInput = document.getElementById('faq-search');
+        const faqItems = document.querySelectorAll('.faq-item');
+        const questions = document.querySelectorAll('.faq-question');
+
+        questions.forEach(question => {
+            question.addEventListener('click', () => {
+                const currentItem = question.parentElement;
+                const isCurrentlyActive = currentItem.classList.contains('active');
+
+                faqItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                if (!isCurrentlyActive) {
+                    currentItem.classList.add('active');
+                }
+            });
+        });
+
+
+        searchInput.addEventListener('input', (event) => {
+
+            const searchTerm = event.target.value.toLowerCase();
+
+            faqItems.forEach(item => {
+                const text = item.innerText.toLowerCase();
+
+                
+                if (text.includes(searchTerm)) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
