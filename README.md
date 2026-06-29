@@ -4,6 +4,6 @@
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-**Live Deployment:** [Ver Demo en Vercel](https://crypgo-landing-psi.vercel.app/index.html) | **PDF Report:** [Descargar Auditoría Técnica](./doc/Developer_&_Digital_Infrastructure_Specialist_Assessment_V1_Jun_2026 _Fernando_Obando.pdf)
+**Live Deployment:** [Ver Demo en Vercel](https://crypgo-landing-psi.vercel.app/index.html) | **PDF Report:** [Descargar Auditoría Técnica](./doc/Developer_&_Digital_Infrastructure_Specialist_Assessment_V1_Jun_2026_Fernando_Obando.pdf)
 
 ---
